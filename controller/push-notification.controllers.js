@@ -30,10 +30,11 @@ exports.SendNotification = (req, res, next) => {
 }
 
 exports.SendNotificationToDevice = (req, res, next) => {
+    console.log(req.body.title);
     var message = {
         app_id: ONE_SIGNAL_CONFIG.APP_ID,
         contents: {
-            en: "Test push notification"
+            en: req.body.title
         },
         included_segments: ["included_external_user_ids"],
         include_external_user_ids: req.body.devices,
