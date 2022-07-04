@@ -8,7 +8,7 @@ exports.SendNotification = (req, res, next) => {
     var message = {
         app_id: ONE_SIGNAL_CONFIG.APP_ID,
         contents: {
-            en: "Test push notification"
+            en: "Notifikasi SLI Tracking"
         },
         included_segments: ["semua"],
         content_available: true,
