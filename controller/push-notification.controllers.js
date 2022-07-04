@@ -34,7 +34,7 @@ exports.SendNotificationToDevice = (req, res, next) => {
     var message = {
         app_id: ONE_SIGNAL_CONFIG.APP_ID,
         contents: {
-            en: req.body.title
+            en: "Important Message"
         },
         include_external_user_ids: ["NEW-APP"],
         content_available: true,
