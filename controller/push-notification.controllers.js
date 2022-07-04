@@ -33,9 +33,11 @@ exports.SendNotificationToDevice = (req, res, next) => {
     console.log(req.body.title);
     var message = {
         app_id: ONE_SIGNAL_CONFIG.APP_ID,
+        headings: {
+            en: "An Important Message"
+        },
         contents: {
             en: req.body.title,
-            id: req.body.title,
         },
         include_external_user_ids: req.body.devices,
         channel_for_external_user_ids: "push",
