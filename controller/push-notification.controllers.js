@@ -30,7 +30,7 @@ exports.SendNotification = (req, res, next) => {
 }
 
 exports.SendNotificationToDevice = (req, res, next) => {
-    console.log(req);
+    console.log(req.body.title);
     var message = {
         app_id: ONE_SIGNAL_CONFIG.APP_ID,
         contents: {
