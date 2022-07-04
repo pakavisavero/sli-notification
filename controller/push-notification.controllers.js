@@ -36,7 +36,10 @@ exports.SendNotificationToDevice = (req, res, next) => {
         contents: {
             en: req.body.title
         },
-        include_external_user_ids: req.body.devices,
+        "included_segments": [
+            "semua"
+        ],
+        "include_external_user_ids": req.body.devices,
         content_available: true,
         small_icon: "ic_notification_icon",
         data: {
