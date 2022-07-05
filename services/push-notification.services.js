@@ -12,7 +12,8 @@ async function SendNotification(data, callback) {
     }
 
     var options = {
-        host: "onesignal.com",
+        host: "https://onesignal.com",
+        port: 443,
         path: "/api/v1/notifications",
         method: "POST",
         headers: headers
