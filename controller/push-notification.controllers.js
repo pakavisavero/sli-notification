@@ -30,7 +30,6 @@ exports.SendNotification = (req, res, next) => {
 }
 
 exports.SendNotificationToDevice = (req, res, next) => {
-    console.log(req.body.title);
     var message = {
         app_id: ONE_SIGNAL_CONFIG.APP_ID,
         headings: {
@@ -58,3 +57,6 @@ exports.SendNotificationToDevice = (req, res, next) => {
         })
     })
 }
+
+//http: //localhost:8300/api/SendNotificationToDevice
+//https://sli-notif.gudang.technology/api/SendNotificationToDevice
